@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: UserLocationService
+  datasource:
+    url: jdbc:postgresql://172.18.0.2:5432/spring
+    username: supriyo
+    password: India@#2019
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080

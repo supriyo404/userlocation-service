@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d %-4r [%t]  %5p %c{1} - InstanceID:%X{test} %m - %n</pattern>
+        </encoder>
+    </appender>
+    <appender name="stdapp" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d %-4r [%t] %5p %c{1} - method:%M - InstanceID:%X{test} - %m %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.supriyo.userlocation" level="INFO" additivity="false">
+        <appender-ref ref="stdapp">
+        </appender-ref>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>
